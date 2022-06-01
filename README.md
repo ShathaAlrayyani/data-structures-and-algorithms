@@ -2,5 +2,5 @@
 
 | Challenge | Link     |
 |-----|----------|
-| Array-Reverse | [README.md](Reverse-Array/README.md) |
+| Array-Reverse | [README.md](Reverse_Array/README.md) |
 |     |          |
