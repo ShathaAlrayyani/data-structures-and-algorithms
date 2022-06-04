@@ -1,22 +1,20 @@
-""" This function should return an array
-with the new value added at the middle index."""
-def insertShiftArray(lst, num):
+"""This function for adding a new value
+ in the middle index of a list"""
+def insertShiftArray(lst,num):
     n = len(lst) // 2
-    lst.insert(n, num)
-    return print(lst)
+    if len(lst) % 2 != 0:
+        n = n + 1
+    lst.insert(n,num)
+    print(lst)
 
 
-""" This function should return an array 
-without the value at the middle index."""
-def deleteShiftArray(arr):
-    n = len(arr) // 2
-    arr.pop(n)
-    print(arr)
+"""This function for deleting the value
+ in the middle index of a list"""
+def deleteShiftArray(lst):
+    n = len(lst) // 2
+    lst.pop(n)
+    print(lst)
 
 
-lst1 = [3, 6, 12, 7, 2]
-lst2 = [1, 7, 13, 77, 22, 9,10]
-
-insertShiftArray([3, 5, 2, 17 , 24,13,1] , "banda" )
-
-deleteShiftArray([3, 5, 2, 17 , 24,13,1] )
+insertShiftArray([1,2,3,4,5],6)
+deleteShiftArray([1,2,3,4,5])
