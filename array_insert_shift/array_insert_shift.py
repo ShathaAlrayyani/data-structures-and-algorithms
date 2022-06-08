@@ -7,7 +7,7 @@ def insertShiftArray(lst, num):
         new_list = lst[:n] + [num] + lst[n:]
     else:
         new_list = lst[:n] + [num] + lst[n:]
-    print(new_list)
+    return new_list
 
 
 """This function for deleting the value
@@ -15,7 +15,8 @@ def insertShiftArray(lst, num):
 def deleteShiftArray(lst):
     n = len(lst) // 2
     new_list = lst[:n] + lst[n+1:]
-    print(new_list)
+    return new_list
+
 
 
 insertShiftArray([1,2,3,4,5],6)
