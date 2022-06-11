@@ -1,6 +1,4 @@
 """ This Function should reverse any array """
-
-
 def reverse(lst):
     if len(lst) == 1:
         return lst
