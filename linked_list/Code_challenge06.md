@@ -9,7 +9,7 @@ write another 3 method and add them to the linked-list class:
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![append method](code06append.png)
+![append method](appendcode06.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
