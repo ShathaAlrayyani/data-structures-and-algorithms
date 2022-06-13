@@ -43,40 +43,67 @@ class LinkedList:
         linked_list += "None"
         return linked_list
 
-    # def append(self, val):
-    #     new_node = Node(val)
-    #
-    #     if self.head is None:
-    #         self.head = new_node
-    #     else:
-    #         current = self.head
-    #         while current.next is not None:
-    #             current = current.next
-    #         current.next = new_node
-    #
-    # def insert_before(self, val1, val2):
-    #     new_node = Node(val2)
-    #
-    #     if self.head is None:
-    #         self.head = new_node
-    #
-    #     else:
-    #         current = self.head
-    #         while current != val1:
-    #             current = current.next
-    #         current = new_node
-    #         current.next = Node(val1)
-    #
-    # def insert_after(self, val1, val2):
-    #     new_node = Node(val2)
-    #
-    #     if self.head is None:
-    #         self.head = new_node
-    #     else:
-    #         current = self.head
-    #         while current != val1:
-    #             current = current.next
-    #         current.next = new_node
+    def append(self, val):
+        new_node = Node(val)
+
+        if self.head is None:
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next is not None:
+                current = current.next
+            current.next = new_node
+
+
+    def insert_before(self, val1, val2):
+        """ALGORITHM AddBefore(newValue, valueToAddBefore)
+// INPUT <-- New value, Value to add before
+// OUTPUT <-- boolean
+
+  Current <-- Head
+
+  IF Current is equal to NULL
+    return FALSE
+
+  WHILE Current.Next is not equal to NULL
+    IF Current.Next.Value is equal to valueToAddBefore
+      newNode <-- NEW Node
+      newNode.Value <-- newValue
+      newNode.Next <-- Current.Next
+      Current.Next <-- newNode
+      return TRUE
+
+    Current <-- Current.Next;
+
+  return FALSE"""
+        new_node = Node(val1)
+        current = self.head
+
+        if current is None:
+            return False
+
+        else:
+            while current.next is not None:
+                if current.next.value == val2:
+                    new_node.value = val1
+                    new_node.next = current.next
+                    current.next = new_node
+                    return True
+                current = current.next
+
+    def insert_after(self, val1, val2):
+        new_node = Node(val2)
+
+        if self.head is None:
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next is not None:
+                if current == Node(val1):
+                    current.next = new_node
+                current = current.next
+
+
 
 
 if __name__ == '__main__':
@@ -87,9 +114,15 @@ if __name__ == '__main__':
     node.insert(13)
     node.insert(15)
     print(node.to_string())
-    # node.insert_before(0, 9)
-    # print(node.to_string())
-    # node.insert_before(7, 24)
+    node.append(5)
+    node.append(6)
+    node.append(14)
+    node.append(17)
+    node.append(20)
+    print(node.to_string())
+    node.insert_before(0, 9)
+    print(node.to_string())
+    # node.insert_after(0, 24)
     # print(node.to_string())
 
 #
