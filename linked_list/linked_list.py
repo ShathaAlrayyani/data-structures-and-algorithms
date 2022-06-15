@@ -54,54 +54,69 @@ class LinkedList:
                 current = current.next
             current.next = new_node
 
-
-    def insert_before(self, val1, val2):
-        """ALGORITHM AddBefore(newValue, valueToAddBefore)
-// INPUT <-- New value, Value to add before
-// OUTPUT <-- boolean
-
-  Current <-- Head
-
-  IF Current is equal to NULL
-    return FALSE
-
-  WHILE Current.Next is not equal to NULL
-    IF Current.Next.Value is equal to valueToAddBefore
-      newNode <-- NEW Node
-      newNode.Value <-- newValue
-      newNode.Next <-- Current.Next
-      Current.Next <-- newNode
-      return TRUE
-
-    Current <-- Current.Next;
-
-  return FALSE"""
-        new_node = Node(val1)
+    def linked_list_kth(self, k):
         current = self.head
-
-        if current is None:
-            return False
-
+        node_list = []
+        while current is not None:
+            node_list.append(current)
+            current.next = current
+        list_len = len(node_list)
+        if k <= 0:
+            raise Exception('This value is not accepted')
+        elif k < list_len:
+            return node_list[list_len - k+1]
         else:
-            while current.next is not None:
-                if current.next.value == val2:
-                    new_node.value = val1
-                    new_node.next = current.next
-                    current.next = new_node
-                    return True
-                current = current.next
+            raise Exception('This value is not found')
 
-    def insert_after(self, val1, val2):
-        new_node = Node(val2)
 
-        if self.head is None:
-            self.head = new_node
-        else:
-            current = self.head
-            while current.next is not None:
-                if current == Node(val1):
-                    current.next = new_node
-                current = current.next
+
+#     def insert_before(self, val1, val2):
+#         """ALGORITHM AddBefore(newValue, valueToAddBefore)
+# // INPUT <-- New value, Value to add before
+# // OUTPUT <-- boolean
+#
+#   Current <-- Head
+#
+#   IF Current is equal to NULL
+#     return FALSE
+#
+#   WHILE Current.Next is not equal to NULL
+#     IF Current.Next.Value is equal to valueToAddBefore
+#       newNode <-- NEW Node
+#       newNode.Value <-- newValue
+#       newNode.Next <-- Current.Next
+#       Current.Next <-- newNode
+#       return TRUE
+#
+#     Current <-- Current.Next;
+#
+#   return FALSE"""
+#         new_node = Node(val1)
+#         current = self.head
+#
+#         if current is None:
+#             return False
+#
+#         else:
+#             while current.next is not None:
+#                 if current.next.value == val2:
+#                     new_node.value = val1
+#                     new_node.next = current.next
+#                     current.next = new_node
+#                     return True
+#                 current = current.next
+#
+#     def insert_after(self, val1, val2):
+#         new_node = Node(val2)
+#
+#         if self.head is None:
+#             self.head = new_node
+#         else:
+#             current = self.head
+#             while current.next is not None:
+#                 if current == Node(val1):
+#                     current.next = new_node
+#                 current = current.next
 
 
 
@@ -120,10 +135,8 @@ if __name__ == '__main__':
     node.append(17)
     node.append(20)
     print(node.to_string())
-    node.insert_before(0, 9)
-    print(node.to_string())
-    # node.insert_after(0, 24)
-    # print(node.to_string())
+    print(node.linked_list_kth(2))
+
 
 #
 # class Node:
