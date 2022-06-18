@@ -11,10 +11,11 @@ write another 3 method and add them to the linked-list class:
 <!-- Embedded whiteboard image -->
 ![append method](appendcode06.png)
 
+![insert_before method](insert_before.png)
+
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-for append method : O(1)  because list are randomly accessed so the last element can be reached in 
-O(1) time that's why time taken to add the new element at the end of the list is O(1).
+for append method : O(N) because insertion is itself O(1), but getting to the last node is O(n)
 
 For insert_before : O(N) because insertion is itself O(1), but getting to a specific node is O(n)
 
