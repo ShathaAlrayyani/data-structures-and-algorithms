@@ -55,7 +55,7 @@ class LinkedList:
             current.next = new_node
 
     def insert_before(self, val1, val2):
-        """It is method to insert new node before a specific """
+        """It is method to insert new node before a specific node"""
         new_node = Node(val2)
         current = self.head
         if current is None:
@@ -73,6 +73,7 @@ class LinkedList:
 
 
     def insert_after(self, val1, val2):
+        """It is method to insert new node after a specific node"""
         new_node = Node(val2)
         current = self.head
 
@@ -89,6 +90,7 @@ class LinkedList:
 
 
     def linked_list_kth(self, k):
+        """It is method to get a specific node with index of k starting from the end of the linked list"""
         current = self.head
         node_list = []
         while current is not None:
