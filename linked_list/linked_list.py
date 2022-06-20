@@ -71,7 +71,6 @@ class LinkedList:
                 current = current.next
             return True
 
-
     def insert_after(self, val1, val2):
         """It is method to insert new node after a specific node"""
         new_node = Node(val2)
@@ -88,7 +87,6 @@ class LinkedList:
                 current = current.next
             return True
 
-
     def linked_list_kth(self, k):
         """It is method to get a specific node with index of k starting from the end of the linked list"""
         current = self.head
@@ -101,42 +99,61 @@ class LinkedList:
             if k < 0:
                 return 'This value is not accepted'
             elif k < list_len:
-                return node_list[list_len - (k+1)].value
+                return node_list[list_len - (k + 1)].value
             else:
                 return 'This value is not found'
         else:
             return 'the list is empty'
 
+    @staticmethod
+    def linked_list_zip(p, s):
+        """Zip the two linked lists together into one so that the nodes
+        alternate between the two lists and return a reference to the zipped list"""
+        p_curr = p.head
+        s_curr = s.head
+        if p_curr is None or s_curr is None:
+            return False
+        # swap their positions until one finishes off
+        while p_curr and s_curr:
+            # To Save next pointers
+            p_next = p_curr.next
+            s_next = s_curr.next
+            # to make q_curr next of p_curr
+            s_curr.next = p_next  # change next pointer of s_curr
+            p_curr.next = s_curr  # change next pointer of p_curr
+            last_p_curr = p_curr.next  # return the pointer of the first list to its origin.
+
+            # update current pointers for next iteration
+            p_curr = p_next
+            s_curr = s_next
+
+            # this if statement means when the first list is shorter than the other list the function will continue
+            # till the second linked list end
+            if not p_curr and s_curr:
+                last_p_curr.next = s_curr
+        return True
+
 
 if __name__ == '__main__':
     node = LinkedList()
-    node.insert(7)
-    node.insert(12)
-    node.insert(0)
-    node.insert(13)
-    node.insert(15)
+    node.insert(5)
+    node.insert(3)
+    node.insert(1)
+    node.append(7)
+    node.append(9)
+    # node.insert_before(15, 17)
+    # node.insert_after(5, 2)
     print(node.to_string())
-    node.append(5)
-    node.append(6)
+    # code2 = node.linked_list_kth(0)
+    # print(code2)
+    node2 = LinkedList()
+    node2.append(0)
+    node2.append(2)
+    node2.append(4)
+    node2.append(6)
+    node2.append(8)
+    print(node2.to_string())
+    node.linked_list_zip(node, node2)
     print(node.to_string())
-    node.insert_before(15, 17)
-    node.insert_after(5, 2)
-    node.append(20)
-    print(node.to_string())
-    code2 = node.linked_list_kth(0)
-    print(code2)
 
-#
-# class Node:
-#     def __int__(self, val):
-#         self.value = val
-#         self.next = None
-#
-#
-# class LinkedList:
-#     def __init__(self):
-#         self.head = None
-#         self.size = 0
-#
-#     def __add__(self, val):
-#
+
