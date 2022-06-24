@@ -118,6 +118,7 @@ class LinkedList:
             # To Save next pointers
             p_next = p_curr.next
             s_next = s_curr.next
+
             # to make q_curr next of p_curr
             s_curr.next = p_next  # change next pointer of s_curr
             p_curr.next = s_curr  # change next pointer of p_curr
@@ -134,13 +135,29 @@ class LinkedList:
         return True
 
 
+    # @staticmethod
+    # def palindrome(ll):
+    #     current = ll.head
+    #     node_list = []
+    #     new_list = []
+    #     while current is not None:
+    #         node_list.append(current.value)
+    #         current = current.next
+    #     for i in range(len(node_list) - 1, -1, -1):
+    #         new_list.append(node_list[i])
+    #     if node_list == new_list:
+    #         return True
+    #     else:
+    #         return False
+
+
 if __name__ == '__main__':
     node = LinkedList()
-    node.insert(5)
+    node.insert(1)
     node.insert(3)
     node.insert(1)
-    node.append(7)
-    node.append(9)
+    # node.append(7)
+    # node.append(9)
     # node.insert_before(15, 17)
     # node.insert_after(5, 2)
     print(node.to_string())
@@ -150,10 +167,22 @@ if __name__ == '__main__':
     node2.append(0)
     node2.append(2)
     node2.append(4)
-    node2.append(6)
-    node2.append(8)
-    print(node2.to_string())
-    node.linked_list_zip(node, node2)
-    print(node.to_string())
+    # node2.append(6)
+    # # node2.append(8)
+    # print(node2.to_string())
+    # # node.linked_list_zip(node, node2)
+    # print(node.to_string())
 
+
+    # {t}->{a}->{c}->{o}->{c}->{a}->{t}
+    node3 = LinkedList()
+    node3.append("t")
+    node3.append("a")
+    node3.append("c")
+    node3.append("o")
+    node3.append("c")
+    node3.append("a")
+    node3.append("t")
+    dana = node3.palindrome(node3)
+    print(dana)
 
