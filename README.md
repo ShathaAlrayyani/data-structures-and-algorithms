@@ -10,3 +10,4 @@
 | Linked List Insertion | [Code Challenge 06](linked_list/Code_challenge06.md) |
 | Linked List kth       | [Code Challenge 07](linked_list/Code_challenge07.md) |
 | Linked List Zip       | [Code Challenge 08](linked_list/Code_challenge08.md) |
+| Stack and Queue       | [Code Challenge 10](stack_and_queue/README.md)       |
