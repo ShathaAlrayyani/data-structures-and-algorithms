@@ -4,7 +4,7 @@ class Node:
         self.next = None
 
 
-class Stack():
+class Stack:
     """
       A stack is a data structure that consists of Nodes. Each Node
       references the next Node in the stack, but does not reference its
@@ -45,7 +45,7 @@ class Stack():
         items = ''
 
         while current:
-            items += str(current.value) + '\n'
+            items += str(current.value)
             current = current.next
 
         return items
@@ -87,7 +87,7 @@ class Queue:
         current = self.front
         items = ''
         while current:
-            items += f"{current.value} \n"
+            items += f"{current.value}"
             current = current.next
 
         return items
