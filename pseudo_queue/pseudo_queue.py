@@ -14,11 +14,14 @@ class PseudoQueue:
         self.stack1.push(value)
 
     def dequeue(self):
+
         while not self.stack1.is_empty():
             value = self.stack1.pop()
             self.stack2.push(value)
         return self.stack2.pop()
 
+        while not self.stack2.is_empty():
+            pass
     def __str__(self):
         current = self.stack1.top
         items = ''
@@ -38,5 +41,5 @@ if __name__ == '__main__':
     print(stack.__str__())
     # print(stack.dequeue())
     print('after dequeue method')
-    stack.dequeue()
+    print(stack.dequeue())
     print(stack.__str__())

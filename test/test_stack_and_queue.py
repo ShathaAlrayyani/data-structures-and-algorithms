@@ -4,7 +4,7 @@ from stack_and_queue.stack_and_queue import Stack, Queue
 
 def test_Stack_push(node1):
     actual = node1.__str__()
-    expected = '8\n6\n4\n2\n0\n'
+    expected = '86420'
     assert expected == actual
 
 def test_Stack_pop(node1):
@@ -15,7 +15,7 @@ def test_Stack_pop(node1):
 def test_Stack_pop_str(node1):
     node1.pop()
     actual = node1.__str__()
-    expected = '6\n4\n2\n0\n'
+    expected = '6420'
     assert expected == actual
 
 def test_Stack_pop_empty():
@@ -42,7 +42,7 @@ def test_Stack_is_empty(node1):
 
 def test_Queue_enqueue(node2):
     actual = node2.__str__()
-    expected = '1 \n3 \n5 \n7 \n9 \n'
+    expected = '13579'
     assert expected == actual
 
 def test_Queue_dequeue(node2):
@@ -53,7 +53,7 @@ def test_Queue_dequeue(node2):
 def test_Queue_dequeue_str(node2):
     node2.dequeue()
     actual = node2.__str__()
-    expected = '3 \n5 \n7 \n9 \n'
+    expected = '3579'
     assert expected == actual
 
 def test_Queue_dequeue_empty():
