@@ -19,6 +19,39 @@ def test_Queue_enqueue(node2):
     expected = '9\n7\n5\n3\n1\n'
     assert expected == actual
 
+def test_exists():
+    assert PseudoQueue
+
+
+def test_enqueue_single():
+    pq = PseudoQueue()
+    pq.enqueue(20)
+    actual = pq.dequeue()
+    expected = 20
+    assert actual == expected
+
+
+def test_dequeue_twenty(pq):
+    actual = pq.dequeue()
+    expected = 20
+    assert actual == expected
+
+
+def test_dequeue_fifteen(pq):
+    pq.dequeue()
+    actual = pq.dequeue()
+    expected = 15
+    assert actual == expected
+
+
+@pytest.fixture
+def pq():
+    pq = PseudoQueue()
+    pq.enqueue(20)
+    pq.enqueue(15)
+    pq.enqueue(10)
+    return pq
+
 @pytest.fixture
 def node2():
     node2 = PseudoQueue()
