@@ -14,14 +14,12 @@ class PseudoQueue:
         self.stack1.push(value)
 
     def dequeue(self):
-
-        while not self.stack1.is_empty():
-            value = self.stack1.pop()
-            self.stack2.push(value)
+        if self.stack2.is_empty():
+            while not self.stack1.is_empty():
+                data_moved = self.stack1.pop()
+                self.stack2.push(data_moved)
         return self.stack2.pop()
 
-        while not self.stack2.is_empty():
-            pass
     def __str__(self):
         current = self.stack1.top
         items = ''
