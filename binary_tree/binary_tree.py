@@ -1,103 +1,126 @@
 from stack_and_queue.stack_and_queue import *
 
-
 class EmptyQueueException(Exception):
     pass
 
 
-class TreeNode:
+class Node:
     def __init__(self, value):
         self.value = value
-        self.left = None
         self.right = None
+        self.left = None
 
 
 class BinaryTree:
+    """
+    Define a method for each type of the Depth-first-Tree
+    """
     def __init__(self):
         self.root = None
 
     def pre_order(self):
+        """
+        get the nodes from tree in depth-first root-left-right
+        """
         if not self.root:
             return self.root
 
-        def _walk(root):
-            print(root.value)
+        def _walk(node, curr_list):
+            """
+            store the value of nodes recursively
+            """
+            if node:
+                curr_list.append(node.value)
+                if node.left is not None:
+                    _walk(node.left, curr_list)
+                if node.right is not None:
+                    _walk(node.right, curr_list)
+            return curr_list
 
-            if root.left:
-                _walk(root.left)
-
-            if root.right:
-                _walk(root.right)
-
-        _walk(self.root)
+        pre_order_list = []
+        _walk(self.root, pre_order_list)
+        return pre_order_list
 
     def in_order(self):
+        """
+        get the nodes from tree in depth-first left-root-right
+        """
         if not self.root:
             return self.root
 
-        def _walk(root):
+        def _walk(node, curr_list):
+            """
+            store the value of nodes recursively
+            """
+            if node.left is not None:
+                _walk(node.left, curr_list)
+            curr_list.append(node.value)
+            if node.right is not None:
+                _walk(node.right, curr_list)
+            return curr_list
 
-            if root.left:
-                _walk(root.left)
-
-            print(root.value)
-
-            if root.right:
-                _walk(root.right)
-
-        _walk(self.root)
+        in_order_list = []
+        _walk(self.root, in_order_list)
+        return in_order_list
 
     def post_order(self):
-        if not self.root:
-            return self.root
+        """
+        get the nodes from tree in depth-first left-right-root
+        """
+        def _walk(node, curr_list):
+            """
+            store the value of nodes recursively
+            """
+            if node.left is not None:
+                _walk(node.left, curr_list)
+            if node.right is not None:
+                _walk(node.right, curr_list)
+            curr_list.append(node.value)
+            return curr_list
 
-        def _walk(root):
+        post_order_list = []
+        _walk(self.root, post_order_list)
+        return post_order_list
 
-            if root.left:
-                _walk(root.left)
+    def find_max(self):
+        if self.root is None:
+            return None
 
-            if root.right:
-                _walk(root.right)
+        def _walk(root, max=0):
+            if root is None:
+                return max
+            if max < root.value:
+                max = root.value
+            left_tree = _walk(root.left, max)
+            if max < left_tree:
+                max = left_tree
+            right_tree = _walk(root.right, max)
+            if max < right_tree:
+                max = right_tree
+            return max
+        return _walk(self.root)
 
-            print(root.value)
-
-        _walk(self.root)
-
-
-class BinarySearchTree:
-    def add(self):
-        """add new value to the tree"""
-        pass
-    def contains(self):
-        """return true if the value I'm looking for exist else return False"""
-        pass
+    def __str__(self):
+        if self.root is None:
+            return 'None'
+        else:
+            res_list = self.pre_order()
+            output = ''
+            for i in res_list:
+                output += f'{i}'
+            return output
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     tree = BinaryTree()
-    tree.root = TreeNode(10)
-    tree.root.left = TreeNode(20)
-    tree.root.right = TreeNode(50)
-    tree.root.left.left = TreeNode(30)
-    tree.root.left.right = TreeNode(40)
-    tree.root.right.left = TreeNode(60)
-    # print(tree.breadth_first())
-    # tree.pre_order()
-    # print("+++++++++++++++++")
-    # tree.pre_order_iter()
-# def pre_order_iter(self):
-#     if not self.root:
-#         return self.root
-#
-#     stack = Stack()
-#     stack.push(self.root)
-#
-#     while not stack.is_empty():
-#         top = stack.pop()
-#         print(top.value)
-#
-#         if top.right:
-#             stack.push(top.right)
-#
-#         if top.left:
-#             stack.push(top.left)
+    tree.root = Node(10)
+    tree.root.left = Node(5)
+    tree.root.right = Node(15)
+    tree.root.left.left = Node(1)
+    tree.root.right.right = Node(20)
+
+    print(tree.pre_order())
+    print(tree.in_order())
+    print(tree.post_order())
+    print(tree.find_max())
+
