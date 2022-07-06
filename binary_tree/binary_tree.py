@@ -113,12 +113,6 @@ class BinaryTree:
 
 if __name__ == '__main__':
     tree = BinaryTree()
-    tree.root = Node(10)
-    tree.root.left = Node(5)
-    tree.root.right = Node(15)
-    tree.root.left.left = Node(1)
-    tree.root.right.right = Node(20)
-
     print(tree.pre_order())
     print(tree.in_order())
     print(tree.post_order())
