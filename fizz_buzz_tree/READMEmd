@@ -1,9 +1,9 @@
 # Challenge Summary
 write a function that take a tree as an argument then determine whether the value of each node is divisible by 3, 5 or both.
-    Create a new tree with the same structure as the original, but the values modified
+Create a new tree with the same structure as the original, but the values modified
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+
 
 ## Approach & Efficiency
 
