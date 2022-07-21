@@ -1,6 +1,4 @@
-from binary_tree import *
 from stack_and_queue.stack_and_queue import *
-from binary_tree.breadth_first import breadth_first
 
 
 def fizz_buzz_tree(tree):
@@ -8,11 +6,14 @@ def fizz_buzz_tree(tree):
     Determine whether the value of each node is divisible by 3, 5 or both.
     Create a new tree with the same structure as the original, but the values modified
     """
-    def _fizz_buzz(val):
+    root = Node(val)
+
+    def _walk(val):
 
         new_tree = ''
         if val % 3 == 0:
             new_tree += 'Fizz'
+
         elif val % 5 == 0:
             new_tree += 'Buzz'
         elif val % 3 == 0 and val % 5 == 0:

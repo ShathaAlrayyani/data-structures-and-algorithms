@@ -1,6 +1,6 @@
 from stack_and_queue.stack_and_queue import *
 
-class EmptyQueueException(Exception):
+class EmptyTree(Exception):
     pass
 
 
@@ -15,6 +15,7 @@ class BinaryTree:
     """
     Define a method for each type of the Depth-first-Tree
     """
+
     def __init__(self):
         self.root = None
 
@@ -67,6 +68,7 @@ class BinaryTree:
         """
         get the nodes from tree in depth-first left-right-root
         """
+
         def _walk(node, curr_list):
             """
             store the value of nodes recursively
@@ -85,36 +87,80 @@ class BinaryTree:
     def find_max(self):
         if self.root is None:
             return None
+        s = Stack
 
-        def _walk(root, max=0):
+        def _walk(root, m=0):
             if root is None:
-                return max
-            if max < root.value:
-                max = root.value
-            left_tree = _walk(root.left, max)
-            if max < left_tree:
-                max = left_tree
-            right_tree = _walk(root.right, max)
-            if max < right_tree:
-                max = right_tree
-            return max
+                return m
+            if m < root.value:
+                m = root.value
+                _walk(root.left, m)
+            if m < root.left.value:
+                m = root.left
+                _walk(root.right, m)
+            if m < root.right.value:
+                m = root.right
+            return m
+
         return _walk(self.root)
 
     def __str__(self):
         if self.root is None:
             return 'None'
         else:
-            res_list = self.pre_order()
+            n_list = self.pre_order()
             output = ''
-            for i in res_list:
-                output += f'{i}'
+            for n in n_list:
+                output += f'{n}'
             return output
+
+
+class BinarySearchTree(BinaryTree):
+    def __init__(self):
+        super().__init__()
+
+    def add(self, value):
+        """"""
+        if self.root is None:
+            self.root = Node(value)
+
+        def _walk(root, val):
+
+            if root is None:
+                root = Node(val)
+                return root
+            elif root.value <= val:
+                _walk(root.right, val)
+            else:
+                _walk(root.left, val)
+
+        return _walk(self.root, value)
+
+    def Contains(self, tree, value):
+        if self.root is None:
+            return False
+
+        def _walk(root, val):
+            if root.value == val:
+                return True
+            elif val < root.value:
+                _walk(root.left, val)
+            elif val > root.value:
+                _walk(root.right, val)
+            else:
+                return False
+        return _walk(self.root, value)
+
 
 
 if __name__ == '__main__':
     tree = BinaryTree()
+    tree.root = Node(15)
+    tree.root.left = Node(7)
+    tree.root.right = Node(19)
     print(tree.pre_order())
     print(tree.in_order())
     print(tree.post_order())
     print(tree.find_max())
+
 
