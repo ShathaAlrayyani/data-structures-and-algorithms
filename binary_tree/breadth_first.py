@@ -1,6 +1,13 @@
 from binary_tree import *
 from stack_and_queue.stack_and_queue import *
 
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+
 def breadth_first(tree):
     """This function Traverse the input tree using a Breadth-first approach"""
     if not tree.root:

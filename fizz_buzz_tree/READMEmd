@@ -1,0 +1,30 @@
+# Challenge Summary
+write a function that take a tree as an argument then determine whether the value of each node is divisible by 3, 5 or both.
+Create a new tree with the same structure as the original, but the values modified
+
+## Whiteboard Process
+
+
+## Approach & Efficiency
+
+- Time complexity is O(n), where n is the number of nodes. You need to traverse all nodes.
+- Space complexity is O(n) as well - since at worst case you need to hold all vertices in the queue.
+
+## Solution
+
+
+First you need to make a Tree by typing the following :
+
+    tree = BinaryTree()
+    tree.root = Node(15)
+    tree.root.left = Node(7)
+    tree.root.right = Node(1)
+    tree.root.left.left = Node(9)
+    tree.root.left.right = Node(95)
+
+Then you call the function and pass the tree as an argument :
+
+    fizz_buzz_tree(tree)
+
+    Output: [FizzBuzz, 7, 1, Fizz, Buzz]
+
