@@ -1,7 +1,6 @@
-try:
-    from binary_tree import *
-except:
-    from binary_tree.binary_tree import *
+from binary_tree.binary_tree import *   # This import to run the tests
+# from binary_tree import *   # This import to run the file
+
 
 
 class BinarySearchTree(BinaryTree):
