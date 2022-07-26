@@ -18,3 +18,4 @@
 | Find Maximum Value                 | [Code Challenge 16](binary_tree/README.md)           |
 | breadth first Traversal            | [Code Challenge 17](binary_tree/breadth_first_md.md) |
 | Fizz Buzz Tree                     | [Code Challenge 18](fizz_buzz_tree/READMEmd)         |
+| Sorting Insertion                  | [Code Challenge 26](sorting_insertion/README.md)     |
