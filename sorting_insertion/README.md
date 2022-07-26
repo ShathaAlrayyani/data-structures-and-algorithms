@@ -1,15 +1,25 @@
 # Challenge Summary
-<!-- Description of the challenge -->
 
+<!-- Description of the challenge -->
+Write a function that takes an array of integers and return a sorted array by tracing the algorithm using the pseudocode
+provided.
 
 ## Whiteboard Process
 
-
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
+- Time complexity: O(N^2) 
+- Space complexity:O(1) 
 
 ## Solution
-<!-- Show how to run your code, and examples of it in action -->
+
+First you need to call the function then give it an array as an argument as below:
+
+        sorting_insertion([5, 4, 7, 2, 8, 3])
+
+        OutPut: [2, 3, 4, 5, 7, 8]
 
 
+## Tests :
+
+pytest tests/test_insertion_sort.py
