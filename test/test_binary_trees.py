@@ -3,13 +3,13 @@ from binary_tree.binary_tree import BinaryTree, Node
 from binary_tree.binary_search_tree import BinarySearchTree
 
 
-# Instantiate empty tree
+# Instantiate empty tr
 def test_empty_tree():
     tree = BinaryTree()
     assert tree.root is None
 
 
-# instantiate tree w/ single root node
+# instantiate tr w/ single root node
 def test_single_root_tree():
     tree = BinaryTree()
     tree.root = Node(25)

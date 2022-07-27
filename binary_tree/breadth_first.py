@@ -9,7 +9,7 @@ class Node:
 
 
 def breadth_first(tree):
-    """This function Traverse the input tree using a Breadth-first approach"""
+    """This function Traverse the input tr using a Breadth-first approach"""
     if not tree.root:
         return "The Tree is empty"
     output = []

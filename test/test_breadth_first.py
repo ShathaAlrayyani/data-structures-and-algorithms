@@ -4,13 +4,13 @@ from binary_tree.binary_tree import *
 from binary_tree.breadth_first import breadth_first
 
 
-# Instantiate empty tree
+# Instantiate empty tr
 def test_empty_tree():
     tree = BinaryTree()
     assert breadth_first(tree) == "The Tree is empty"
 
 
-# instantiate tree w/ single root node
+# instantiate tr w/ single root node
 def test_single_root_tree():
     t = BinaryTree()
     t.root = Node(15)
