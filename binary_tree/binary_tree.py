@@ -21,7 +21,7 @@ class BinaryTree:
 
     def pre_order(self):
         """
-        get the nodes from tree in depth-first root-left-right
+        get the nodes from tr in depth-first root-left-right
         """
         if not self.root:
             return self.root
@@ -45,7 +45,7 @@ class BinaryTree:
 
     def in_order(self):
         """
-        get the nodes from tree in depth-first left-root-right
+        get the nodes from tr in depth-first left-root-right
         """
         if not self.root:
             return self.root
@@ -67,7 +67,7 @@ class BinaryTree:
 
     def post_order(self):
         """
-        get the nodes from tree in depth-first left-right-root
+        get the nodes from tr in depth-first left-right-root
         """
         post_order_list = []
 

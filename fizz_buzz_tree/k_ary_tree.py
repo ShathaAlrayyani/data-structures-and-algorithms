@@ -50,8 +50,8 @@ if __name__ == '__main__':
     a.children.append(s)
     b.children.append(h)
 
-    # tree.root.children = Node(15)
-    # tree.root.children = Node(19)
-    # tree.root.children = Node(95)
+    # tr.root.children = Node(15)
+    # tr.root.children = Node(19)
+    # tr.root.children = Node(95)
     print(tree.level_order())
 

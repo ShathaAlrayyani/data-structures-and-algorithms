@@ -12,7 +12,7 @@ def test_empty_tree():
     assert fizz_buzz_tree(tree) == "The Tree is empty"
 
 
-# instantiate tree w/ single root node
+# instantiate tr w/ single root node
 def test_single_root_tree():
     t = BinaryTree()
     t.root = Node(15)
