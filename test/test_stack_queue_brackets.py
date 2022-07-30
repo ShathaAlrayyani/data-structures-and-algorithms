@@ -1,5 +1,5 @@
 import pytest
-from stack_queue_brackets.stack_queue_brackets import validate_brackets
+from DS.stack_queue.stack_queue_brackets.stack_queue_brackets import validate_brackets
 
 data_set = [
     ('{}', True),

@@ -1,22 +1,23 @@
 # data-structures-and-algorithms
 
-| Challenge                          | Link                                                 |
-|------------------------------------|------------------------------------------------------|
-| Array Reverse                      | [Code Challenge 01](Reverse_Array/README.md)         |
-| array insert shift                 | [Code Challenge 02](array_insert_shift/README.md)    |
-| Binary Search                      | [Code Challenge 03](array_binary_search/README.md)   |
-| Fibonacci                          | [Code Challenge 04](Fibunacci/README.md)             |
-| Linked List                        | [Code Challenge 05](linked_list/Code_challenge05.md) |
-| Linked List Insertion              | [Code Challenge 06](linked_list/Code_challenge06.md) |
-| Linked List kth                    | [Code Challenge 07](linked_list/Code_challenge07.md) |
-| Linked List Zip                    | [Code Challenge 08](linked_list/Code_challenge08.md) |
-| Stack and Queue                    | [Code Challenge 10](stack_and_queue/README.md)       |
-| Stack Queue Pseudo                 | [Code Challenge 11](pseudo_queue/PseudoQueue.md)     |
-| Animal Shelter                     | [Code Challenge 12](animal_shelter/README.md)        |
-| Stack Queue Brackets               | [Code Challenge 13](stack_queue_brackets/README.md)  |
-| Binary Tree and BST Implementation | [Code Challenge 15](binary_tree/README.md)           |
-| Find Maximum Value                 | [Code Challenge 16](binary_tree/README.md)           |
-| breadth first Traversal            | [Code Challenge 17](binary_tree/breadth_first_md.md) |
-| Fizz Buzz Tree                     | [Code Challenge 18](fizz_buzz_tree/READMEmd)         |
-| Sorting Insertion                  | [Code Challenge 26](sorting_insertion/README.md)     |
-| Merge Sort                         | [Code Challenge 27](merge_sort/README.md)            |
+| Challenge                          | Link                                                               |
+|------------------------------------|--------------------------------------------------------------------|
+| Array Reverse                      | [Code Challenge 01](Not_DS/Reverse_Array/README.md)                |
+| array insert shift                 | [Code Challenge 02](Not_DS/array_insert_shift/README.md)           |
+| Binary Search                      | [Code Challenge 03](Not_DS/array_binary_search/README.md)          |
+| Fibonacci                          | [Code Challenge 04](Not_DS/Fibunacci/README.md)                    |
+| Linked List                        | [Code Challenge 05](DS/linked_list/Code_challenge05.md)            |
+| Linked List Insertion              | [Code Challenge 06](DS/linked_list/Code_challenge06.md)            |
+| Linked List kth                    | [Code Challenge 07](DS/linked_list/Code_challenge07.md)            |
+| Linked List Zip                    | [Code Challenge 08](DS/linked_list/Code_challenge08.md)            |
+| Stack and Queue                    | [Code Challenge 10](DS/stack_queue/stack_and_queue/README.md)      |
+| Stack Queue Pseudo                 | [Code Challenge 11](DS/stack_queue/pseudo_queue/PseudoQueue.md)    |
+| Animal Shelter                     | [Code Challenge 12](DS/stack_queue/animal_shelter/README.md)       |
+| Stack Queue Brackets               | [Code Challenge 13](DS/stack_queue/stack_queue_brackets/README.md) |
+| Binary Tree and BST Implementation | [Code Challenge 15](DS/Trees/binary_tree/README.md)                |
+| Find Maximum Value                 | [Code Challenge 16](DS/Trees/binary_tree/README.md)                |
+| breadth first Traversal            | [Code Challenge 17](DS/Trees/binary_tree/breadth_first_md.md)      |
+| Fizz Buzz Tree                     | [Code Challenge 18](DS/Trees/fizz_buzz_tree/READMEmd)              |
+| Sorting Insertion                  | [Code Challenge 26](Not_DS/Sorting/sorting_insertion/README.md)    |
+| Merge Sort                         | [Code Challenge 27](Not_DS/Sorting/merge_sort/README.md)           |
+| Quick Sort                         | [Code Challenge 28](Not_DS/Sorting/quick_sort/README.md)           |

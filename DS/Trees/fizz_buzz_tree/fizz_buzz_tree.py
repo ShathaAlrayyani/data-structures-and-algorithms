@@ -1,17 +1,14 @@
-from stack_and_queue.stack_and_queue import *
-from k_ary_tree import *
+from DS.Trees.fizz_buzz_tree.k_ary_tree import *
 
 def fizz_buzz_tree(tr):
     """
     Determine whether the value of each node is divisible by 3, 5 or both.
     Create a new tree with the same structure as the original, but the values modified
     """
-    print(tr)
     if not tr:
         return "The Tree is empty"
     new_tree = []
     i = 0
-
     while i in range(len(tr)):
         val = tr[i]
         if val % 3 == 0 and val % 5 == 0:
@@ -43,4 +40,3 @@ if __name__ == '__main__':
     b.children.append(h)
 
     print(fizz_buzz_tree(tree.level_order()))
-

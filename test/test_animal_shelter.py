@@ -1,7 +1,4 @@
-import pytest
-from animal_shelter.animal_shelter import *
-
-
+from DS.stack_queue.animal_shelter.animal_shelter import *
 def test_enqueue_single_cat():
     """
     tset enqueue single cat and check the dequeue based on pref

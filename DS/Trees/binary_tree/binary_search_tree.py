@@ -1,4 +1,4 @@
-from binary_tree.binary_tree import *   # This import to run the tests
+from DS.Trees.binary_tree.binary_tree import *   # This import to run the tests
 # from binary_tree import *   # This import to run the file
 
 

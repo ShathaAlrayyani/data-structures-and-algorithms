@@ -1,5 +1,5 @@
 import pytest
-from linked_list.linked_list import LinkedList
+from DS.linked_list.linked_list import LinkedList
 
 
 def test_linked_list_kth(node1):
