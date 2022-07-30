@@ -1,4 +1,4 @@
-from stack_and_queue.stack_and_queue import *
+from DS.stack_queue.stack_and_queue.stack_and_queue import *
 
 class Node:
 

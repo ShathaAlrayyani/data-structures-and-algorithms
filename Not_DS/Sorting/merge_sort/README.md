@@ -22,4 +22,4 @@ First you need to call the function then give it an array as an argument as belo
 
 ## Tests :
 
-pytest tests/test_merge_sort.py
+pytest test/test_merge_sort.py

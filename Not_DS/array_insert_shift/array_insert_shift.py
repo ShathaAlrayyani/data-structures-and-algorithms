@@ -1,6 +1,6 @@
-"""This function for adding a new value
- in the middle index of a list"""
 def insertShiftArray(lst, num):
+    """This function for adding a new value
+     in the middle index of a list"""
     n = len(lst) // 2
     if len(lst) % 2 != 0:
         n = n + 1
@@ -10,17 +10,17 @@ def insertShiftArray(lst, num):
     return new_list
 
 
-"""This function for deleting the value
- in the middle index of a list"""
 def deleteShiftArray(lst):
+    """This function for deleting the value
+     in the middle index of a list"""
     n = len(lst) // 2
     new_list = lst[:n] + lst[n+1:]
     return new_list
 
 
 
-insertShiftArray([1,2,3,4,5],6)
-deleteShiftArray([1,2,3,4,5])
+insertShiftArray([1, 2, 3, 4, 5], 6)
+deleteShiftArray([1, 2, 3, 4, 5])
 
 """ n = len(lst) // 2
     new_list = []

@@ -1,5 +1,4 @@
-import pytest
-from sorting_insertion.sorting_insertion import sorting_insertion
+from Not_DS.Sorting.sorting_insertion.sorting_insertion import sorting_insertion
 
 
 def test_empty_array():

@@ -1,5 +1,5 @@
 import pytest
-from stack_and_queue.stack_and_queue import Stack, Queue
+from DS.stack_queue.stack_and_queue.stack_and_queue import Stack, Queue
 
 
 def test_Stack_push(node1):

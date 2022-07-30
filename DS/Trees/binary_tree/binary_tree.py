@@ -1,5 +1,3 @@
-from stack_and_queue.stack_and_queue import *
-
 class EmptyTree(Exception):
     pass
 

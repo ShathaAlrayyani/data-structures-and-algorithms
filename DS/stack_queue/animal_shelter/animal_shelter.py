@@ -1,4 +1,4 @@
-from stack_and_queue.stack_and_queue import Queue
+from DS.stack_queue.stack_and_queue.stack_and_queue import Queue
 
 class AnimalShelter:
     def __init__(self):

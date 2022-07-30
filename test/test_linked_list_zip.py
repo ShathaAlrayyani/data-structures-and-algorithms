@@ -1,5 +1,5 @@
 import pytest
-from linked_list.linked_list import LinkedList
+from DS.linked_list.linked_list import LinkedList
 
 def test_linked_list_zip(node1, node2):
     node2.linked_list_zip(node2, node1)

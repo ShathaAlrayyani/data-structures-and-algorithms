@@ -183,6 +183,6 @@ if __name__ == '__main__':
     node3.append("c")
     node3.append("a")
     node3.append("t")
-    dana = node3.palindrome(node3)
-    print(dana)
+    # dana = node3.palindrome(node3)
+    # print(dana)
 

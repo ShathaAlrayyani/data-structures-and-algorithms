@@ -1,16 +1,15 @@
 import pytest
+# from DS.Trees.binary_tree.binary_tree import *
+from DS.Trees.binary_tree.breadth_first import *
 
-from binary_tree.binary_tree import *
-from binary_tree.breadth_first import breadth_first
 
-
-# Instantiate empty tr
+# Instantiate empty tree
 def test_empty_tree():
     tree = BinaryTree()
     assert breadth_first(tree) == "The Tree is empty"
 
 
-# instantiate tr w/ single root node
+# instantiate tree w/ single root node
 def test_single_root_tree():
     t = BinaryTree()
     t.root = Node(15)

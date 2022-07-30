@@ -1,5 +1,5 @@
 import pytest
-from pseudo_queue.pseudo_queue import PseudoQueue
+from DS.stack_queue.pseudo_queue.pseudo_queue import PseudoQueue
 
 
 def test_pseudo_queue_dequeue(node2):

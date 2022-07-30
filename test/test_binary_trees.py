@@ -1,6 +1,6 @@
 import pytest
-from binary_tree.binary_tree import BinaryTree, Node
-from binary_tree.binary_search_tree import BinarySearchTree
+from DS.Trees.binary_tree.binary_tree import BinaryTree, Node
+from DS.Trees.binary_tree.binary_search_tree import BinarySearchTree
 
 
 # Instantiate empty tr

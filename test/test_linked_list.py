@@ -1,5 +1,5 @@
 import pytest
-from linked_list.linked_list import LinkedList
+from DS.linked_list.linked_list import LinkedList
 
 
 #  instantiate an empty linked list

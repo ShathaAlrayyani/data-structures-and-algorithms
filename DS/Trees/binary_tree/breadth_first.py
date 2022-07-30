@@ -1,5 +1,5 @@
-from binary_tree import *
-from stack_and_queue.stack_and_queue import *
+from DS.Trees.binary_tree.binary_tree import *
+from DS.stack_queue.stack_and_queue.stack_and_queue import *
 
 class Node:
     def __init__(self, value):

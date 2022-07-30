@@ -1,5 +1,4 @@
-import pytest
-from merge_sort.merge_sort import *
+from Not_DS.Sorting.merge_sort.merge_sort import *
 
 def test_empty_array():
     actual = merge_sort([])
