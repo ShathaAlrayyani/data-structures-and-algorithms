@@ -22,3 +22,4 @@
 | Merge Sort                         | [Code Challenge 27](Not_DS/Sorting/merge_sort/README.md)           |
 | Quick Sort                         | [Code Challenge 28](Not_DS/Sorting/quick_sort/README.md)           |
 | Hash Tables                        | [Code Challenge 30](DS/Hash_Tables/README.md)                      |
+| Hashmap Repeated Word              | [Code Challenge 31](DS/Hash_Tables/hashmap_repeated_word.md)       |
