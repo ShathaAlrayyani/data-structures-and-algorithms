@@ -23,3 +23,5 @@
 | Quick Sort                         | [Code Challenge 28](Not_DS/Sorting/quick_sort/README.md)           |
 | Hash Tables                        | [Code Challenge 30](DS/Hash_Tables/README.md)                      |
 | Hashmap Repeated Word              | [Code Challenge 31](DS/Hash_Tables/hashmap_repeated_word.md)       |
+| Tree Intersection                  | [Code Challenge 32](DS/Hash_Tables/tree_intersection/README.md)    |
+| Hashmap Left Join                  | [Code Challenge 33](DS/Hash_Tables/hashmap_left_join/README.md)    |
