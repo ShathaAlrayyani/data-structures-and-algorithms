@@ -1,4 +1,3 @@
-from DS.tree_intersection.tree_intersection import *
 import pytest
 
 
