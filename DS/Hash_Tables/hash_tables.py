@@ -1,6 +1,6 @@
 class Node:
     """
-    Node Instantiator.
+    Node Instantiate.
     This class will have only an __init__ method to create nodes.
     """
 
@@ -31,10 +31,8 @@ class LinkedList:
     def insert(self, value):
         """
         This method will insert a node at the start of the linked list
-        arguments :
-        value
-        returns:
-        None
+        arguments : value
+        returns:None
         """
         node = Node(value)
         node.next = self.head
@@ -54,14 +52,14 @@ class Hashtable:
     def set(self, key, value):
         hashed_key = self._hash(key)
         hash_list = LinkedList()
-        self.__buckets[hashed_key] = hash_list
-        self.__keys.append(key)
-        self.__buckets[hashed_key].insert((key, value))
+        self._buckets[hashed_key] = hash_list
+        self._keys.append(key)
+        hash_list.insert((key, value))
 
     def get(self, key):
         hashed_key = self._hash(key)
 
-        bucket = self._buckets[hashed_key]
+        bucket = self._buckets[hashed_key] = LinkedList()
 
         current = bucket.head
         while current:
@@ -72,9 +70,9 @@ class Hashtable:
     def contains(self, key):
         hashed_key = self._hash(key)
 
-        bucket = self._buckets[hashed_key]
+        bucket = self._buckets[hashed_key] = LinkedList()
 
-        if not bucket is None:
+        if bucket is not None:
             current = bucket.head
             while current:
                 if current.data[0] == key:
@@ -84,3 +82,4 @@ class Hashtable:
 
     def keys(self):
         return self._keys
+
