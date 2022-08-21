@@ -1,5 +1,5 @@
 import pytest
-from Not_DS.Sorting.quick_sort.quick_sort import *
+from Algorithm.Sorting.quick_sort.quick_sort import *
 
 def test_positive_numbers():
     a = [5, 7, 9, 6, 1, 7, 4, 6]

@@ -1,4 +1,4 @@
-from Not_DS.Sorting.sorting_insertion.sorting_insertion import sorting_insertion
+from Algorithm.Sorting.sorting_insertion.sorting_insertion import sorting_insertion
 
 
 def test_empty_array():
