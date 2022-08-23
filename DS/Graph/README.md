@@ -27,6 +27,15 @@ Write a graph class with the following methods:
   - Arguments: none
   - Returns the total number of nodes in the graph
 
+- Breadth First:
+  - Arguments : None 
+  - returns A collection of nodes  in the order they were visited.
+  Display the collection.
+
+## Whiteboard Process
+
+![Breadth First](Graph_breadth_first.jpg)
+
 
 ## Approach & Efficiency
 
@@ -42,8 +51,10 @@ Write a graph class with the following methods:
 - Size :
   - Time: O(1)
   - Space: O(1)
-
-
+- Breadth First: 
+  - Time: O(N^2)
+  - Space: O(N)
+  
 ## API
 
 - add_node(): add a vertex to the graph.
