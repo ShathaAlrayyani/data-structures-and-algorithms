@@ -26,3 +26,5 @@
 | Tree Intersection                  | [Code Challenge 32](DS/Hash_Tables/tree_intersection/README.md)    |
 | Hashmap Left Join                  | [Code Challenge 33](DS/Hash_Tables/hashmap_left_join/README.md)    |
 | Graphs                             | [Code Challenge 35](DS/Graph/README.md)                            |
+| Graphs Breadth First               | [Code Challenge 36](DS/Graph/README.md)                            |
+

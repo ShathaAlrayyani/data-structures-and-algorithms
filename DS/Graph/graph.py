@@ -94,7 +94,8 @@ if __name__ == "__main__":
 
     print(g.breadth_first(a))
     print('*' * 50)
-    print(g.get_neighbors(b.value))
+    print(g.get_neighbors(b))
+
 
 
 
