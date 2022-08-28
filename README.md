@@ -27,4 +27,4 @@
 | Hashmap Left Join                  | [Code Challenge 33](DS/Hash_Tables/hashmap_left_join/README.md)    |
 | Graphs                             | [Code Challenge 35](DS/Graph/README.md)                            |
 | Graphs Breadth First               | [Code Challenge 36](DS/Graph/README.md)                            |
-
+| Graph Business Trip                | [Code Challenge 37](DS/Graph/graph_business_trip/README.md)        |
